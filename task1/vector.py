@@ -18,9 +18,10 @@ class Vector:
         else:
             raise ValueError("Nefunguje správně")
     def __mul__(self, other):
-        if isinstance(other, (int, float)):
+        if isinstance(other, Vector):
+            return Vector(self.x * other.x, self.y * other.y)
+        elif isinstance(other, (int, float)):
             return Vector(self.x * other, self.y * other)
-        else:
-            raise ValueError("Nefunguje správně")
+        raise ValueError("Nefunguje správně")
     
     

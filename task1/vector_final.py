@@ -15,6 +15,7 @@ class Vector:
         raise ValueError("Unsupported operand type")
 
     def __sub__(self, other):
+        print(other)
         if isinstance(other, Vector):
             return Vector(self.x - other.x, self.y - other.y)
         raise ValueError("Unsupported operand type")

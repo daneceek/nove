@@ -1,0 +1,321 @@
+[
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "importPath": "vector",
+        "description": "vector",
+        "isExtraImport": true,
+        "detail": "vector",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "importPath": "priority_queue",
+        "description": "priority_queue",
+        "isExtraImport": true,
+        "detail": "priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "importPath": "linked_list",
+        "description": "linked_list",
+        "isExtraImport": true,
+        "detail": "linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "vectors",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def vectors():\n    v1 = Vector(1, 2)\n    v2 = Vector(3, 4)\n    return v1, v2\ndef test_addition(vectors):\n    v1, v2 = vectors\n    result = v1 + v2\n    assert result == Vector(4, 6)\ndef test_subtraction(vectors):\n    v1, v2 = vectors",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "test_addition",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def test_addition(vectors):\n    v1, v2 = vectors\n    result = v1 + v2\n    assert result == Vector(4, 6)\ndef test_subtraction(vectors):\n    v1, v2 = vectors\n    result = v1 - v2\n    assert result == Vector(-2, -2)\ndef test_multiplication(vectors):\n    v1, _ = vectors",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "test_subtraction",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def test_subtraction(vectors):\n    v1, v2 = vectors\n    result = v1 - v2\n    assert result == Vector(-2, -2)\ndef test_multiplication(vectors):\n    v1, _ = vectors\n    result = v1 * 3\n    assert result == Vector(3, 6)\ndef test_equality(vectors):\n    v1, v2 = vectors",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "test_multiplication",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def test_multiplication(vectors):\n    v1, _ = vectors\n    result = v1 * 3\n    assert result == Vector(3, 6)\ndef test_equality(vectors):\n    v1, v2 = vectors\n    assert v1 == Vector(1, 2)\n    assert not v1 == v2\ndef test_multiplication_of_vectors(vectors):\n    v1, v2 = vectors",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "test_equality",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def test_equality(vectors):\n    v1, v2 = vectors\n    assert v1 == Vector(1, 2)\n    assert not v1 == v2\ndef test_multiplication_of_vectors(vectors):\n    v1, v2 = vectors\n    result = v1 * v2\n    assert result == Vector(3,8)",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "test_multiplication_of_vectors",
+        "kind": 2,
+        "importPath": "task1.test_vector",
+        "description": "task1.test_vector",
+        "peekOfCode": "def test_multiplication_of_vectors(vectors):\n    v1, v2 = vectors\n    result = v1 * v2\n    assert result == Vector(3,8)",
+        "detail": "task1.test_vector",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "task1.vector",
+        "description": "task1.vector",
+        "peekOfCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __repr__(self):\n        return f\"Vector({self.x}, {self.y})\"\n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y \n    def __add__(self, other):\n        if isinstance(other, Vector):",
+        "detail": "task1.vector",
+        "documentation": {}
+    },
+    {
+        "label": "Vector",
+        "kind": 6,
+        "importPath": "task1.vector_final",
+        "description": "task1.vector_final",
+        "peekOfCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __repr__(self):\n        return f\"Vector({self.x}, {self.y})\"\n    def __add__(self, other):\n        if isinstance(other, Vector):\n            return Vector(self.x + other.x, self.y + other.y)\n        raise ValueError(\"Unsupported operand type\")",
+        "detail": "task1.vector_final",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "task2.example",
+        "description": "task2.example",
+        "peekOfCode": "class Event:\n    def __init__(self, description, time):\n        self.description = description\n        self.time = time\nclass EventTimeline:\n    def __init__(self):\n        self.events = []\n    def add_event(self, description, time):\n        event = Event(description, time)\n        self.events.append(event)",
+        "detail": "task2.example",
+        "documentation": {}
+    },
+    {
+        "label": "EventTimeline",
+        "kind": 6,
+        "importPath": "task2.example",
+        "description": "task2.example",
+        "peekOfCode": "class EventTimeline:\n    def __init__(self):\n        self.events = []\n    def add_event(self, description, time):\n        event = Event(description, time)\n        self.events.append(event)\n        self.events.sort(key=lambda x: x.time)\n    def __len__(self):\n        return len(self.events)\n    def __getitem__(self, index):",
+        "detail": "task2.example",
+        "documentation": {}
+    },
+    {
+        "label": "timeline",
+        "kind": 5,
+        "importPath": "task2.example",
+        "description": "task2.example",
+        "peekOfCode": "timeline = EventTimeline()\n# Adding events\ntimeline.add_event(\"Meeting\", datetime(2024, 2, 1, 14, 0))\ntimeline.add_event(\"Lunch with friends\", datetime(2024, 2, 1, 12, 30))\ntimeline.add_event(\"Presentation\", datetime(2024, 2, 2, 10, 0))\n# Iterating through the object using a for loop\nprint(\"Timeline:\")\nfor event in timeline:\n    print(event.description, \"-\", event.time)\n# Displaying the length of the timeline",
+        "detail": "task2.example",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "kind": 6,
+        "importPath": "task2.priority_queue",
+        "description": "task2.priority_queue",
+        "peekOfCode": "class PriorityQueue:\n    pass\npriority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)",
+        "detail": "task2.priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "priority_queue",
+        "kind": 5,
+        "importPath": "task2.priority_queue",
+        "description": "task2.priority_queue",
+        "peekOfCode": "priority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)\nprint(\"Processing tasks in Priority Order:\")\nwhile len(priority_queue) > 0:",
+        "detail": "task2.priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "kind": 6,
+        "importPath": "task2.priority_queue_final",
+        "description": "task2.priority_queue_final",
+        "peekOfCode": "class PriorityQueue:\n    def __init__(self):\n        self.elements = []\n    def __len__(self):\n        return len(self.elements)\n    def __iter__(self):\n        return iter(self.elements)\n    def push(self, item, priority):\n        self.elements.append((item, priority))\n        self.elements.sort(key=lambda x: x[1])",
+        "detail": "task2.priority_queue_final",
+        "documentation": {}
+    },
+    {
+        "label": "priority_queue",
+        "kind": 5,
+        "importPath": "task2.priority_queue_final",
+        "description": "task2.priority_queue_final",
+        "peekOfCode": "priority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)\nprint(\"Processing tasks in Priority Order:\")\nwhile len(priority_queue) > 0:",
+        "detail": "task2.priority_queue_final",
+        "documentation": {}
+    },
+    {
+        "label": "test_push",
+        "kind": 2,
+        "importPath": "task2.test_priority_queue",
+        "description": "task2.test_priority_queue",
+        "peekOfCode": "def test_push():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    assert len(pq) == 3\ndef test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)",
+        "detail": "task2.test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_pop",
+        "kind": 2,
+        "importPath": "task2.test_priority_queue",
+        "description": "task2.test_priority_queue",
+        "peekOfCode": "def test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    assert pq.pop() == \"Task 2\"\n    assert len(pq) == 2\ndef test_empty_pop():\n    pq = PriorityQueue()\n    with pytest.raises(IndexError):",
+        "detail": "task2.test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_pop",
+        "kind": 2,
+        "importPath": "task2.test_priority_queue",
+        "description": "task2.test_priority_queue",
+        "peekOfCode": "def test_empty_pop():\n    pq = PriorityQueue()\n    with pytest.raises(IndexError):\n        pq.pop()\ndef test_iteration():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    tasks = list(pq)",
+        "detail": "task2.test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_iteration",
+        "kind": 2,
+        "importPath": "task2.test_priority_queue",
+        "description": "task2.test_priority_queue",
+        "peekOfCode": "def test_iteration():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    tasks = list(pq)\n    assert tasks == [\"Task 2\", \"Task 3\", \"Task 1\"]",
+        "detail": "task2.test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "task3.linked_list",
+        "description": "task3.linked_list",
+        "peekOfCode": "class Node:\n    def __init__(self, data=None):\n        self.data = data\n        self.next_node = None\n        self.prev_node = None\nclass DoublyLinkedList():\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None",
+        "detail": "task3.linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "kind": 6,
+        "importPath": "task3.linked_list",
+        "description": "task3.linked_list",
+        "peekOfCode": "class DoublyLinkedList():\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None\n        self.length = 0",
+        "detail": "task3.linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "task3.linked_list_final",
+        "description": "task3.linked_list_final",
+        "peekOfCode": "class Node:\n    def __init__(self, data=None):\n        self.data = data\n        self.next_node = None\n        self.prev_node = None\nclass DoublyLinkedList(list):\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None",
+        "detail": "task3.linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "kind": 6,
+        "importPath": "task3.linked_list_final",
+        "description": "task3.linked_list_final",
+        "peekOfCode": "class DoublyLinkedList(list):\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None\n        self.length = 0\n    def __len__(self):\n        return self.length\n    def __getitem__(self, index):\n        if index < 0 or index >= len(self):",
+        "detail": "task3.linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "linked_list",
+        "kind": 5,
+        "importPath": "task3.linked_list_final",
+        "description": "task3.linked_list_final",
+        "peekOfCode": "linked_list = DoublyLinkedList()\nlinked_list.append(1)\nlinked_list.append(2)\nlinked_list.append(3)\nprint(\"Length:\", len(linked_list))\nprint(\"Items:\")\nfor item in linked_list:\n    print(item)\nprint(\"First item:\", linked_list[0])\n# Odstraníme první prvek",
+        "detail": "task3.linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "test_length",
+        "kind": 2,
+        "importPath": "task3.test_linked_list",
+        "description": "task3.test_linked_list",
+        "peekOfCode": "def test_length():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    assert len(linked_list) == 3\ndef test_get_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)",
+        "detail": "task3.test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_item",
+        "kind": 2,
+        "importPath": "task3.test_linked_list",
+        "description": "task3.test_linked_list",
+        "peekOfCode": "def test_get_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    assert linked_list[0] == 1\ndef test_set_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)",
+        "detail": "task3.test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_set_item",
+        "kind": 2,
+        "importPath": "task3.test_linked_list",
+        "description": "task3.test_linked_list",
+        "peekOfCode": "def test_set_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    linked_list[0] = 0\n    assert linked_list[0] == 0\ndef test_del_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)",
+        "detail": "task3.test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_del_item",
+        "kind": 2,
+        "importPath": "task3.test_linked_list",
+        "description": "task3.test_linked_list",
+        "peekOfCode": "def test_del_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    del linked_list[1]\n    assert len(linked_list) == 2\n    assert linked_list[1] == 3\ndef test_iteration():\n    linked_list = DoublyLinkedList()",
+        "detail": "task3.test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_iteration",
+        "kind": 2,
+        "importPath": "task3.test_linked_list",
+        "description": "task3.test_linked_list",
+        "peekOfCode": "def test_iteration():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    items = list(linked_list)\n    assert items == [1, 2, 3]",
+        "detail": "task3.test_linked_list",
+        "documentation": {}
+    }
+]

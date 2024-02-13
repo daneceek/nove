@@ -161,16 +161,25 @@
         "kind": 6,
         "importPath": "task2.priority_queue",
         "description": "task2.priority_queue",
-        "peekOfCode": "class PriorityQueue:\n    pass\npriority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)",
+        "peekOfCode": "class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n        self.priority_array = []\n        self.completed_sort = 0\n    def push(self, item, priority):\n        dictionary = {}\n        dictionary[item] = priority\n        self.queue.append(dictionary)\n        self.priority_array.append(priority)",
         "detail": "task2.priority_queue",
         "documentation": {}
     },
     {
-        "label": "priority_queue",
+        "label": "pq",
         "kind": 5,
         "importPath": "task2.priority_queue",
         "description": "task2.priority_queue",
-        "peekOfCode": "priority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)\nprint(\"Processing tasks in Priority Order:\")\nwhile len(priority_queue) > 0:",
+        "peekOfCode": "pq = PriorityQueue()\npq.push(\"Task 1\", 3)\npq.push(\"Task 2\", 1)\npq.push(\"Task 3\", 2)\ntasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
+        "detail": "task2.priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "task2.priority_queue",
+        "description": "task2.priority_queue",
+        "peekOfCode": "tasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
         "detail": "task2.priority_queue",
         "documentation": {}
     },
@@ -206,7 +215,7 @@
         "kind": 2,
         "importPath": "task2.test_priority_queue",
         "description": "task2.test_priority_queue",
-        "peekOfCode": "def test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    assert pq.pop() == \"Task 2\"\n    assert len(pq) == 2\ndef test_empty_pop():\n    pq = PriorityQueue()\n    with pytest.raises(IndexError):",
+        "peekOfCode": "def test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    print(pq.queue)\n    assert pq.pop() == \"Task 2\"\n    assert len(pq) == 2\ndef test_empty_pop():\n    pq = PriorityQueue()",
         "detail": "task2.test_priority_queue",
         "documentation": {}
     },

@@ -16,7 +16,7 @@ def test_pop():
     pq.push("Task 1", 3)
     pq.push("Task 2", 1)
     pq.push("Task 3", 2)
-
+    print(pq.queue)
     assert pq.pop() == "Task 2"
     assert len(pq) == 2
 

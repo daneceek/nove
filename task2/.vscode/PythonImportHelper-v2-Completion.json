@@ -1,0 +1,143 @@
+[
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "importPath": "priority_queue",
+        "description": "priority_queue",
+        "isExtraImport": true,
+        "detail": "priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "class Event:\n    def __init__(self, description, time):\n        self.description = description\n        self.time = time\nclass EventTimeline:\n    def __init__(self):\n        self.events = []\n    def add_event(self, description, time):\n        event = Event(description, time)\n        self.events.append(event)",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "EventTimeline",
+        "kind": 6,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "class EventTimeline:\n    def __init__(self):\n        self.events = []\n    def add_event(self, description, time):\n        event = Event(description, time)\n        self.events.append(event)\n        self.events.sort(key=lambda x: x.time)\n    def __len__(self):\n        return len(self.events)\n    def __getitem__(self, index):",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "timeline",
+        "kind": 5,
+        "importPath": "example",
+        "description": "example",
+        "peekOfCode": "timeline = EventTimeline()\n# Adding events\ntimeline.add_event(\"Meeting\", datetime(2024, 2, 1, 14, 0))\ntimeline.add_event(\"Lunch with friends\", datetime(2024, 2, 1, 12, 30))\ntimeline.add_event(\"Presentation\", datetime(2024, 2, 2, 10, 0))\n# Iterating through the object using a for loop\nprint(\"Timeline:\")\nfor event in timeline:\n    print(event.description, \"-\", event.time)\n# Displaying the length of the timeline",
+        "detail": "example",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "kind": 6,
+        "importPath": "priority_queue",
+        "description": "priority_queue",
+        "peekOfCode": "class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n        self.priority_array = []\n        self.completed_sort = 0\n    def push(self, item, priority):\n        dictionary = {}\n        dictionary[item] = priority\n        self.queue.append(dictionary)\n        self.priority_array.append(priority)",
+        "detail": "priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "pq",
+        "kind": 5,
+        "importPath": "priority_queue",
+        "description": "priority_queue",
+        "peekOfCode": "pq = PriorityQueue()\npq.push(\"Task 1\", 3)\npq.push(\"Task 2\", 1)\npq.push(\"Task 3\", 2)\ntasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
+        "detail": "priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "tasks",
+        "kind": 5,
+        "importPath": "priority_queue",
+        "description": "priority_queue",
+        "peekOfCode": "tasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
+        "detail": "priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "PriorityQueue",
+        "kind": 6,
+        "importPath": "priority_queue_final",
+        "description": "priority_queue_final",
+        "peekOfCode": "class PriorityQueue:\n    def __init__(self):\n        self.elements = []\n    def __len__(self):\n        return len(self.elements)\n    def __iter__(self):\n        return iter(self.elements)\n    def push(self, item, priority):\n        self.elements.append((item, priority))\n        self.elements.sort(key=lambda x: x[1])",
+        "detail": "priority_queue_final",
+        "documentation": {}
+    },
+    {
+        "label": "priority_queue",
+        "kind": 5,
+        "importPath": "priority_queue_final",
+        "description": "priority_queue_final",
+        "peekOfCode": "priority_queue = PriorityQueue()\npriority_queue.push(\"Task 1\", 3)\npriority_queue.push(\"Task 2\", 1)\npriority_queue.push(\"Task 3\", 2)\nprint(\"Priority Queue Length:\", len(priority_queue))\nprint(\"Tasks in Priority Order:\")\nfor task in priority_queue:\n    print(task)\nprint(\"Processing tasks in Priority Order:\")\nwhile len(priority_queue) > 0:",
+        "detail": "priority_queue_final",
+        "documentation": {}
+    },
+    {
+        "label": "test_push",
+        "kind": 2,
+        "importPath": "test_priority_queue",
+        "description": "test_priority_queue",
+        "peekOfCode": "def test_push():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    assert len(pq) == 3\ndef test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)",
+        "detail": "test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_pop",
+        "kind": 2,
+        "importPath": "test_priority_queue",
+        "description": "test_priority_queue",
+        "peekOfCode": "def test_pop():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    print(pq.queue)\n    assert pq.pop() == \"Task 2\"\n    assert len(pq) == 2\ndef test_empty_pop():\n    pq = PriorityQueue()",
+        "detail": "test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_empty_pop",
+        "kind": 2,
+        "importPath": "test_priority_queue",
+        "description": "test_priority_queue",
+        "peekOfCode": "def test_empty_pop():\n    pq = PriorityQueue()\n    with pytest.raises(IndexError):\n        pq.pop()\ndef test_iteration():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    tasks = list(pq)",
+        "detail": "test_priority_queue",
+        "documentation": {}
+    },
+    {
+        "label": "test_iteration",
+        "kind": 2,
+        "importPath": "test_priority_queue",
+        "description": "test_priority_queue",
+        "peekOfCode": "def test_iteration():\n    pq = PriorityQueue()\n    pq.push(\"Task 1\", 3)\n    pq.push(\"Task 2\", 1)\n    pq.push(\"Task 3\", 2)\n    tasks = list(pq)\n    assert tasks == [\"Task 2\", \"Task 3\", \"Task 1\"]",
+        "detail": "test_priority_queue",
+        "documentation": {}
+    }
+]

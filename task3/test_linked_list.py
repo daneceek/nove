@@ -1,5 +1,5 @@
 from linked_list import DoublyLinkedList
-
+import pytest
 
 def test_length():
     linked_list = DoublyLinkedList()
@@ -14,6 +14,9 @@ def test_get_item():
     linked_list.append(2)
     linked_list.append(3)
     assert linked_list[0] == 1
+    assert linked_list[-2] == 2
+    with pytest.raises(IndexError):
+        assert linked_list[4]
 
 def test_set_item():
     linked_list = DoublyLinkedList()

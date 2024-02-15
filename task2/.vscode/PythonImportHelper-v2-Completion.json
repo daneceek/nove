@@ -69,24 +69,6 @@
         "documentation": {}
     },
     {
-        "label": "pq",
-        "kind": 5,
-        "importPath": "priority_queue",
-        "description": "priority_queue",
-        "peekOfCode": "pq = PriorityQueue()\npq.push(\"Task 1\", 3)\npq.push(\"Task 2\", 1)\npq.push(\"Task 3\", 2)\ntasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
-        "detail": "priority_queue",
-        "documentation": {}
-    },
-    {
-        "label": "tasks",
-        "kind": 5,
-        "importPath": "priority_queue",
-        "description": "priority_queue",
-        "peekOfCode": "tasks = list(pq)\nprint(tasks)\n# nejmensi cislo ma nejmensi prioritu",
-        "detail": "priority_queue",
-        "documentation": {}
-    },
-    {
         "label": "PriorityQueue",
         "kind": 6,
         "importPath": "priority_queue_final",

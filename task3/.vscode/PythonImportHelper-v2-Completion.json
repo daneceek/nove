@@ -1,0 +1,109 @@
+[
+    {
+        "label": "DoublyLinkedList",
+        "importPath": "linked_list",
+        "description": "linked_list",
+        "isExtraImport": true,
+        "detail": "linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "linked_list",
+        "description": "linked_list",
+        "peekOfCode": "class Node:\n    def __init__(self, data=None):\n        self.data = data\n        self.next_node = None\n        self.prev_node = None\nclass DoublyLinkedList():\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None",
+        "detail": "linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "kind": 6,
+        "importPath": "linked_list",
+        "description": "linked_list",
+        "peekOfCode": "class DoublyLinkedList():\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None\n        self.length = 0\n    def append(self, data):\n        newnode = Node(data)\n        if self.length == 0:\n            self.head = newnode",
+        "detail": "linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "Node",
+        "kind": 6,
+        "importPath": "linked_list_final",
+        "description": "linked_list_final",
+        "peekOfCode": "class Node:\n    def __init__(self, data=None):\n        self.data = data\n        self.next_node = None\n        self.prev_node = None\nclass DoublyLinkedList(list):\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None",
+        "detail": "linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "DoublyLinkedList",
+        "kind": 6,
+        "importPath": "linked_list_final",
+        "description": "linked_list_final",
+        "peekOfCode": "class DoublyLinkedList(list):\n    def __init__(self):\n        super().__init__()\n        self.head = None\n        self.tail = None\n        self.length = 0\n    def __len__(self):\n        return self.length\n    def __getitem__(self, index):\n        if index < 0 or index >= len(self):",
+        "detail": "linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "linked_list",
+        "kind": 5,
+        "importPath": "linked_list_final",
+        "description": "linked_list_final",
+        "peekOfCode": "linked_list = DoublyLinkedList()\nlinked_list.append(1)\nlinked_list.append(2)\nlinked_list.append(3)\nprint(\"Length:\", len(linked_list))\nprint(\"Items:\")\nfor item in linked_list:\n    print(item)\nprint(\"First item:\", linked_list[0])\n# Odstraníme první prvek",
+        "detail": "linked_list_final",
+        "documentation": {}
+    },
+    {
+        "label": "test_length",
+        "kind": 2,
+        "importPath": "test_linked_list",
+        "description": "test_linked_list",
+        "peekOfCode": "def test_length():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    assert len(linked_list) == 3\ndef test_get_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)",
+        "detail": "test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_item",
+        "kind": 2,
+        "importPath": "test_linked_list",
+        "description": "test_linked_list",
+        "peekOfCode": "def test_get_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    assert linked_list[0] == 1\n    assert linked_list[-2] == 2\n    with pytest.raises(IndexError):\n        assert linked_list[4]\ndef test_set_item():",
+        "detail": "test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_set_item",
+        "kind": 2,
+        "importPath": "test_linked_list",
+        "description": "test_linked_list",
+        "peekOfCode": "def test_set_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    linked_list[0] = 0\n    assert linked_list[0] == 0\ndef test_del_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)",
+        "detail": "test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_del_item",
+        "kind": 2,
+        "importPath": "test_linked_list",
+        "description": "test_linked_list",
+        "peekOfCode": "def test_del_item():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    del linked_list[1]\n    assert len(linked_list) == 2\n    assert linked_list[1] == 3\ndef test_iteration():\n    linked_list = DoublyLinkedList()",
+        "detail": "test_linked_list",
+        "documentation": {}
+    },
+    {
+        "label": "test_iteration",
+        "kind": 2,
+        "importPath": "test_linked_list",
+        "description": "test_linked_list",
+        "peekOfCode": "def test_iteration():\n    linked_list = DoublyLinkedList()\n    linked_list.append(1)\n    linked_list.append(2)\n    linked_list.append(3)\n    items = list(linked_list)\n    assert items == [1, 2, 3]",
+        "detail": "test_linked_list",
+        "documentation": {}
+    }
+]
